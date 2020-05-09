@@ -1,4 +1,4 @@
 provider "google" {
-  project     = "shinshu-gke"
+  project     = var.PROJECT_ID
   credentials = var.GOOGLE_CREDENTIALS
 }

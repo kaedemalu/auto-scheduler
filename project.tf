@@ -1,4 +1,4 @@
 resource "google_project" "shinshu_gke" {
-  name       = "shinshu-gke"
-  project_id = "shinshu-gke"
+  name       = var.PROJECT_NAME
+  project_id = var.PROJECT_ID
 }

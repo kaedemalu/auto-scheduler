@@ -26,5 +26,4 @@ resource "google_compute_instance" "autostop_instance" {
       "https://www.googleapis.com/auth/trace.append",
     ]
   }
-
 }
