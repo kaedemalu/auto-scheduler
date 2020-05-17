@@ -10,7 +10,7 @@ resource "google_cloud_scheduler_job" "instance_stopper" {
 
   pubsub_target {
     topic_name = google_pubsub_topic.instance_sucheduler.id
-    data       = "{\"zone\": ${google_compute_instance.autostop_instance.zone}, \"instance\": ${google_compute_instance.autostop_instance.id}}"
+    data       = "{\"zone\": \"${google_compute_instance.autostop_instance.zone}\", \"instance\": \"${google_compute_instance.autostop_instance.id}\"}"
   }
 }
 
@@ -22,6 +22,6 @@ resource "google_cloud_scheduler_job" "instance_starter" {
 
   pubsub_target {
     topic_name = google_pubsub_topic.instance_sucheduler.id
-    data       = "{\"zone\": ${google_compute_instance.autostop_instance.zone}, \"instance\": ${google_compute_instance.autostop_instance.id}}"
+    data       = "{\"zone\": \"${google_compute_instance.autostop_instance.zone}\", \"instance\": \"${google_compute_instance.autostop_instance.id}\"}"
   }
 }
