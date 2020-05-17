@@ -11,7 +11,7 @@ resource "google_cloud_scheduler_job" "instance_stopper" {
 
   pubsub_target {
     topic_name = google_pubsub_topic.instance_sucheduler.id
-    data       = "sample"
+    data       = "test"
   }
 }
 
@@ -24,6 +24,6 @@ resource "google_cloud_scheduler_job" "instance_starter" {
 
   pubsub_target {
     topic_name = google_pubsub_topic.instance_sucheduler.id
-    data       = "sample"
+    data       = "test"
   }
 }
